@@ -8,7 +8,6 @@ extern "C" {
     #[wasm_bindgen(js_namespace = console, js_name = log)]
     pub fn log_many(a: &str, b: &str);
 }
-
 #[macro_export]
 macro_rules! console_log {
   ($($t:tt)*) => (hello::log(&format_args!($($t)*).to_string()))
